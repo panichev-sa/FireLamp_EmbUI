@@ -50,11 +50,11 @@ JeeUI2 lib used under MIT License Copyright (c) 2019 Marsel Akhkamov
 #include <FastLED.h>
 
 //-----------------------------------
-//#define ESP_USE_BUTTON                                      // если строка не закомментирована, должна быть подключена кнопка (иначе ESP может регистрировать "фантомные" нажатия и некорректно устанавливать яркость)
+#define ESP_USE_BUTTON                                      // если строка не закомментирована, должна быть подключена кнопка (иначе ESP может регистрировать "фантомные" нажатия и некорректно устанавливать яркость)
 //#define LAMP_DEBUG                                          // режим отладки, можно также включать в platformio.ini
 //#define DEBUG_TELNET_OUTPUT  (true)                         // true - отладочные сообщения будут выводиться в telnet вместо Serial порта (для удалённой отладки без подключения usb кабелем) // Deprecated
 //#define OTA                                                 // Обновление по ОТА
-//#define MIC_EFFECTS                                         // Включить использование микрофона для эффектов
+#define MIC_EFFECTS                                         // Включить использование микрофона для эффектов
 //#define MP3PLAYER                                           // Включить использование MP3 плеера (DF Player)
 //#define SHOWSYSCONFIG                                       // Показывать системное меню
 //#define DISABLE_LED_BUILTIN                                 // Отключить встроенный в плату светодиод, если нужно чтобы светил - закомментировать строку
@@ -196,7 +196,7 @@ typedef enum {NR_NONE,BIT_1,BIT_2,BIT_3,BIT_4} MIC_NOISE_REDUCE_LEVEL;
 #define CONNECTION_ANGLE      (1U)                          // угол подключения: 0 - левый нижний, 1 - левый верхний, 2 - правый верхний, 3 - правый нижний
 #endif
 #ifndef STRIP_DIRECTION
-#define STRIP_DIRECTION       (3U)                          // направление ленты из угла: 0 - вправо, 1 - вверх, 2 - влево, 3 - вниз
+#define STRIP_DIRECTION       (1U)                          // направление ленты из угла: 0 - вправо, 1 - вверх, 2 - влево, 3 - вниз
                                                             // при неправильной настройке матрицы вы получите предупреждение "Wrong matrix parameters! Set to default"
                                                             // шпаргалка по настройке матрицы здесь! https://alexgyver.ru/matrix_guide/
 #endif
